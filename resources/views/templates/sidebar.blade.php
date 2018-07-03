@@ -26,7 +26,7 @@
 
 
         <!-- Side navigation links -->
-        @include('templates.side-bar-menu')
+        @include('templates.sidebar-menu')
         <!--/. Side navigation links -->
     </ul>
     <div class="sidenav-bg mask-strong"></div>
