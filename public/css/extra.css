@@ -57,3 +57,9 @@ html, body, main{
     border-bottom-right-radius: .3rem; 
 }
 
+/* table  */
+
+.datatable {
+    border-top:1px solid #dddddd;
+    border-bottom:1px solid #dddddd;
+}

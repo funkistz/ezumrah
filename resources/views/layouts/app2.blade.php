@@ -55,6 +55,7 @@
     <!--/.Footer-->
 
     <!-- SCRIPTS -->
+    <script type="text/javascript" src="{{ asset('js/extra.js') }}"></script>
     <script type="text/javascript" src="{{ asset('mdbootstrap-pro/js/mdb.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('vendor/jsvalidation/js/jsvalidation.js')}}"></script>
 
@@ -64,6 +65,12 @@
         $(".button-collapse").sideNav();
         
         new WOW().init();
+
+        @foreach (['danger', 'error', 'warning', 'success', 'info'] as $type)
+            @if(Session::has('alert-' . $type))
+                toast('{{ $type }}', "{{ Session::get('alert-' . $type) }}");
+            @endif
+        @endforeach
     
     </script>
 
